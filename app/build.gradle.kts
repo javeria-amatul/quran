@@ -54,6 +54,11 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation(Dependencies.constraintLayout)
+    implementation(Dependencies.navFragment)
+    implementation(Dependencies.navUi)
+    implementation(Dependencies.splashScreen)
+
+
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.junitExt)
     androidTestImplementation(Dependencies.espressoCore)
