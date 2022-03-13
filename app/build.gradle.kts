@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
+    kotlin(Plugins.kapt)
+    id(Plugins.hiltApp)
 }
 
 android {
@@ -57,7 +59,19 @@ dependencies {
     implementation(Dependencies.navFragment)
     implementation(Dependencies.navUi)
     implementation(Dependencies.splashScreen)
+    //Retrofit
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.retrofitGsonConverter)
 
+    //OkHttp - define a BOM and its version
+//    implementation(Dependencies.okHttpBom)
+//    implementation(Dependencies.okHttp)
+//    implementation(Dependencies.okHttpLogging)
+    //GSON
+    implementation(Dependencies.googleCodeGson)
+    //hilt
+    implementation(Dependencies.hilt)
+    kapt(Dependencies.hiltCompiler)
 
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.junitExt)
