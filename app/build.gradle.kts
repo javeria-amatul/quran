@@ -1,6 +1,9 @@
 plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
+    id(Plugins.kotlinKapt)
+    id(Plugins.daggerHiltAndroid)
+    id(Plugins.safeArgs)
 }
 
 android {
@@ -8,8 +11,8 @@ android {
 
     defaultConfig {
         applicationId = Configs.applicationId
-        minSdkVersion(Configs.minSdkVersion)
-        targetSdkVersion(Configs.targetSdkVersion)
+        minSdk = Configs.minSdkVersion
+        targetSdk = Configs.targetSdkVersion
         versionCode = Apps.versionCode
         versionName = Apps.versionName
     }
@@ -45,6 +48,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -52,7 +60,21 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
     implementation (Dependencies.constraintLayout)
-    testImplementation (Dependencies.junit)
+    //hilt
+    implementation(Dependencies.hiltAndroid)
+    kapt(Dependencies.hiltCompiler)
+    //Navigation component
+    implementation(Dependencies.navigationFragment)
+    implementation(Dependencies.navigationUi)
+    implementation(Dependencies.navigationDynamixFeaturesFragment)
+    // For instrumentation tests
     androidTestImplementation (Dependencies.junitExt)
     androidTestImplementation (Dependencies.espressoCore)
+    androidTestImplementation(Dependencies.hiltAndroidTesting)
+    kaptAndroidTest(Dependencies.hiltCompiler)
+    // For local unit tests
+    testImplementation (Dependencies.junit)
+    testImplementation(Dependencies.hiltAndroidTesting)
+    kaptTest(Dependencies.hiltCompiler)
+
 }
