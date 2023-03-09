@@ -1,5 +1,5 @@
 object Versions {
-    const val kotlinVersion = "1.7.21"
+    const val kotlinVersion = "1.8.10"
     const val appCompatVersion = "1.6.1"
     const val materialVersion = "1.4.0"
     const val constraintLayoutVersion = "2.1.4"
@@ -7,6 +7,10 @@ object Versions {
     const val junitExtVersion = "1.1.5"
     const val espressoCoreVersion = "3.5.1"
     const val hiltVersion = "2.45"
-    const val androidGradleVersion = "7.2.1"
+    const val androidGradleVersion = "7.3.0"
     const val navComponentVersion = "2.5.3"
+    const val composeVersion = "1.3.3"
+    const val composeActivity = "1.6.1"
+    const val materialIOVersion = "3:1.0.1"
+    const val composeNavGraph = "2.5.3"
 }

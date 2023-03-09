@@ -49,9 +49,14 @@ android {
         jvmTarget = "1.8"
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.2"
+    }
+
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        compose = true
     }
 }
 
@@ -67,6 +72,17 @@ dependencies {
     implementation(Dependencies.navigationFragment)
     implementation(Dependencies.navigationUi)
     implementation(Dependencies.navigationDynamixFeaturesFragment)
+    //Compose nav graph
+    implementation(Dependencies.navigationCompose)
+    //Compose
+    implementation(Dependencies.composeUi)
+    implementation(Dependencies.composeUiTooling)
+    implementation(Dependencies.composeActivity)
+    androidTestImplementation(Dependencies.composeUiTest)
+    debugImplementation(Dependencies.composeUi)
+    debugImplementation(Dependencies.composeUiTestManifest)
+    //Material IO 3
+    implementation(Dependencies.materialIO)
     // For instrumentation tests
     androidTestImplementation (Dependencies.junitExt)
     androidTestImplementation (Dependencies.espressoCore)

@@ -15,4 +15,11 @@ object Dependencies {
     const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navComponentVersion}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navComponentVersion}"
     const val navigationDynamixFeaturesFragment = "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navComponentVersion}"
+    const val composeUi = "androidx.compose.ui:ui:${Versions.composeVersion}"
+    const val composeUiTooling = "androidx.compose.ui:ui-tooling-preview:${Versions.composeVersion}"
+    const val composeActivity = "androidx.activity:activity-compose:${Versions.composeActivity}"
+    const val composeUiTest = "androidx.compose.ui:ui-test-junit4:${Versions.composeVersion}"
+    const val composeUiTestManifest = "androidx.compose.ui:ui-test-manifest:${Versions.composeVersion}"
+    const val materialIO = "androidx.compose.material3:material${Versions.materialIOVersion}"
+    const val navigationCompose = "androidx.navigation:navigation-compose:${Versions.composeNavGraph}"
 }
